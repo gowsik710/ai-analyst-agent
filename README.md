@@ -84,11 +84,17 @@ Deployed live on internet                → Done
 ## Datasets Tested and Results
 
 Dataset          Rows      Columns   Type              Accuracy
+
 Titanic          891       12        Mixed             100%
+
 Iris             150       5         Numeric           100%
+
 Tips             244       7         Mixed             100%
+
 Products         170       3         Messy text        100%
+
 Boston Housing   506       14        Complex numeric   100%
+
 Diamonds         53,940    10        Large mixed       100%
 
 Overall accuracy: 88-92% across all dataset types
@@ -98,9 +104,13 @@ Overall accuracy: 88-92% across all dataset types
 ## Performance Metrics
 
 Task Success Rate        → 88-92%
+
 Self Correction Rate     → 75%+
+
 Average Response Time    → 3-5 seconds
+
 Max Dataset Size Tested  → 53,940 rows
+
 Number of Datasets       → 6
 
 ---
