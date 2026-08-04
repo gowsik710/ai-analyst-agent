@@ -24,11 +24,17 @@ A regular chatbot tells you what to do. This agent does it for you.
 You ask → "What is the survival rate by gender?"
 
 Agent:
+
 Step 1 → Reads your data schema automatically
+
 Step 2 → Decides what Python code to write
+
 Step 3 → Writes the code itself
+
 Step 4 → Executes on full dataset
+
 Step 5 → Finds error → fixes it automatically
+
 Step 6 → Returns correct answer only
 
 Zero manual coding from the user. Fully autonomous.
@@ -38,10 +44,15 @@ Zero manual coding from the user. Fully autonomous.
 ## Tech Stack
 
 Python              → Core programming language
+
 Claude API          → AI brain of the agent
+
 Streamlit           → Web application interface
+
 Pandas              → Data loading and analysis
+
 Plotly              → Interactive chart generation
+
 Anthropic SDK       → Claude API connection
 
 ---
