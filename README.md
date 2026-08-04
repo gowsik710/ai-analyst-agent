@@ -82,19 +82,19 @@ Correct answer shown to user
 
 ## What We Achieved
 
-Ask any question in plain English        → Done
+Ask any question in plain English        
 
-Auto chart generation                    → Done
+Auto chart generation                   
 
-Auto insight report                      → Done
+Auto insight report                      
 
-Self correction in background            → Done
+Self correction in background           
 
-Works on any CSV dataset                 → Done
+Works on any CSV dataset                 
 
-Auto cleans messy data                   → Done
+Auto cleans messy data                   
 
-Deployed live on internet                → Done
+Deployed live on internet                
 
 ---
 
