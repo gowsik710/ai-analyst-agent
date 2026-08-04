@@ -83,11 +83,17 @@ Correct answer shown to user
 ## What We Achieved
 
 Ask any question in plain English        → Done
+
 Auto chart generation                    → Done
+
 Auto insight report                      → Done
+
 Self correction in background            → Done
+
 Works on any CSV dataset                 → Done
+
 Auto cleans messy data                   → Done
+
 Deployed live on internet                → Done
 
 ---
