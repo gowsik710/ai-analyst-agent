@@ -42,16 +42,6 @@ uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
     
-    # Auto clean messy columns
-    for col in df.columns:
-        if df[col].dtype == object:
-            cleaned = df[col].str.extract(r'(\d+\.?\d*)')
-            if cleaned.notna().sum()[0] > len(df) * 0.5:
-                try:
-                    df[col] = cleaned.astype(float)
-                except:
-                    pass
-    
     st.success(f"✅ Loaded: {df.shape[0]} rows x {df.shape[1]} columns")
     st.dataframe(df.head(3))
 
@@ -76,7 +66,7 @@ if uploaded_file:
         with st.spinner(""):
             response = client.messages.create(
                 model="claude-sonnet-4-6",
-                max_tokens=300,
+                max_tokens=800,
                 messages=[{"role": "user", "content": f"""Dataset:
 {schema}
 
@@ -92,6 +82,8 @@ Check data types before calculating.
 Clean messy columns if needed."""}]
             )
             code = extract_code(response.content[0].text)
+            output = ""
+            success = False
             if code:
                 output, success = execute_code(code, df)
                 if not success:
@@ -107,7 +99,7 @@ Clean messy columns if needed."""}]
                     code = extract_code(fix.content[0].text)
                     if code:
                         output, success = execute_code(code, df)
-            st.write(output if success else "Please try again.")
+            st.write(output if success else f"Analysis failed: {output}")
 
 # Cell 5 ( Ask For a Chart )
 if uploaded_file:
